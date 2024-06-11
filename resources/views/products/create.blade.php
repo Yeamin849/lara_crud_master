@@ -12,12 +12,15 @@
     </div>
     <div class="container">
       <div class="row d-flex justify-content-center">
+        <div class="col-md-10 d-flex justify-content-end">
+          <a href="{{route('products.index')}}" class="btn btn-dark mt-4">Back</a>
+        </div>
         <div class="col-md-10 ">
           <div class="card my-4 border-0 shadow-lg">
             <div class="card-header bg-dark">
               <h3 class="text-white">Create Poroduct</h3>
             </div>
-            <form action="{{route('products.store')}}" method="POST">
+            <form enctype="multipart/form-data" action="{{route('products.store')}}" method="POST">
               @csrf
               <div class="card-body">
                 <div class="mb-3">
