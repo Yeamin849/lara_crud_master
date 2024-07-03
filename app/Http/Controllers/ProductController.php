@@ -128,7 +128,7 @@ class ProductController extends Controller
         return redirect()-> route('products.index')->with('success', 'Products Updated Successfully!');
     }
      // this method will delete a  product
-     public function delete($id){
+     public function destroy($id){
         $product = Product::findOrFail($id);
 
         // Delete Image
@@ -139,6 +139,6 @@ class ProductController extends Controller
 
         $product->delete();
 
-        // return redirect()-> route('products.index')->with('success', 'Products Delete Successfully!');
+        return redirect()-> route('products.index')->with('success', 'Products Delete Successfully!');
      }
 }

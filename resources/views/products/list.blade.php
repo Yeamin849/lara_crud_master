@@ -57,8 +57,8 @@
                         <td>{{\Carbon\Carbon::parse($item->created_at)->format('d M, Y')}}</td>
                         <td>
                           <a href="{{route('products.edit',$item->id)}}" class="btn btn-dark">Edit</a>
-                          <a href="" onclick="deleteProduct({{$item->id}})" class="btn btn-danger">Delete</a>
-                          <form id="delete-product-form-{{$item->id}}" action="{{route('products.delete',$item->id)}}" method="POST">
+                          <a href="#" onclick="deleteProduct({{$item->id}})" class="btn btn-danger">Delete</a>
+                          <form id="delete-product-form-{{$item->id}}" action="{{route('products.destroy',$item->id)}}" method="POST">
                             @csrf
                             @method('delete')
                           </form>
